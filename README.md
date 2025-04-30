@@ -35,7 +35,7 @@ To enhance user experience, this project includes the development of a **chatbot
 ## ✅ Key Features
 
 - Multi-agent architecture  
-- data preprocessing 
+- data preprocessing (only take the introduction until the last paragraph before the references)
 - Chunking with semantic search  
 - Cross-encoder based re-ranking for better answer relevance
 
