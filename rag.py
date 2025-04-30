@@ -11,11 +11,11 @@ from fastapi.templating import Jinja2Templates
 from fastapi.encoders import jsonable_encoder
 from reranking import rerank_documents
 import os
-import json
 
 app = FastAPI()
+app.mount("/static", StaticFiles(directory="static"), name="static")
 templates = Jinja2Templates(directory="templates")
-local_llm = "model/meditron-7b.Q4_K_M.gguf"
+local_llm = "static/model/meditron-7b.Q4_K_M.gguf"
 
 # bisa diubah
 config = {
