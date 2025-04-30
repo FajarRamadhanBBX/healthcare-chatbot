@@ -22,7 +22,7 @@ config = {
     'max_new_tokens': 1024,
     'context_length': 2048,
     'repetition_penalty': 1.1,
-    'temperature': 0.7,
+    'temperature': 0.1,
     'top_k': 50,
     'top_p': 0.9,
     'stream': True,
@@ -68,9 +68,10 @@ async def get_response(query: str = Form(...)):
     best_doc = best_doc[0]
     context = best_doc.page_content
 
+    print("\nContext:\n", context)
     final_prompt = prompt.format(question=query, context=context)
     response = llm(final_prompt)
-    print("Response:", response)
+    print("\nResponse:\n", response)
     response = jsonable_encoder(response)
 
     return response

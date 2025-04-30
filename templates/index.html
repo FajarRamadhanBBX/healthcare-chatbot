@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Investment Banking Chatbot</title>
+    <title>Wicara Chatbot</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="static/css/style.css">
 </head>
 <body>
     <div class="container chat-container">
-        <h1 class="chat-heading">Medical RAG QA App</h1>
-
+        <img src="static/images/logo.png" class="img-fluid w-25 d-block mx-auto" alt="Deskripsi gambar">
+        <h1 class="chat-heading">Consult your public speaking difficulties</h1>
         <div class="accordion" id="appDescriptionAccordion">
             <div class="accordion-item">
                 <h2 class="accordion-header" id="descriptionHeading">
@@ -21,7 +21,7 @@
                 </h2>
                 <div id="collapseDescription" class="accordion-collapse collapse" aria-labelledby="descriptionHeading" data-bs-parent="#appDescriptionAccordion">
                     <div class="accordion-body text-dark">
-                        This is a RAG implementation using Open Source stack. Intel's Neural Chat has been used to build this app along with BGE Embeddings as an embedding model, Chroma DB as a vector store, and Langchain & CTransformers as an orchestration frameworks.
+                        This is the RAG system that can answer your questions about your fear of public speaking and maybe how to solve it.
                     </div>
                 </div>
             </div>
@@ -54,7 +54,6 @@
                 }
 
                 const data = await response.json();
-                // document.getElementById('response').innerHTML = `<p>${data.answer}</p><br><pre><b>Context: </b> ${data.source_document}</pre><br><pre><b>Source Document: </b> ${data.doc}</pre>`;
                 document.getElementById('response').innerHTML = `${data}`;
             } catch (error) {
                 console.error('Error:', error);

@@ -1,53 +1,76 @@
+.accordion {
+    margin-top: 20px;
+    border-radius: 4px;
+}
+
+.accordion-button {
+    color: white;
+    background-color: #555;
+}
+
+.accordion-body {
+    color: white; /* Improved visibility of text */
+}
+
 body {
-    background-color: black;
+    background-color: white;
     font-family: 'Poppins', sans-serif;
     color: white;
 }
+
 .chat-container {
     max-width: 800px;
     margin: 50px auto;
     margin-top: 10%;
     padding: 20px;
-    background-color: #333;
+    background-color: #D6EEFF;
     border-radius: 10px;
 }
+
 .chat-heading {
     text-align: center;
     font-size: 2.5em;
     font-weight: 600;
     margin-bottom: 30px;
-    color: #ffd700; /* Golden color for the heading */
+    color: #0678FF; /* Golden color for the heading */
 }
+
 .chat-input {
     margin-top: 20px; /* Added margin */
     margin-bottom: 20px;
     height: 100px; /* Increased height */
 }
+
 .chat-button {
-    background-color: green;
+    background-color: #0678FF;
     color: white;
     padding: 10px 20px;
     font-size: 1.2em;
 }
+
+.chat-button:hover {
+    background-color: #024fa1; /* Darker shade on hover */
+}
+
+.chat-button:active {
+    background-color: #143964; /* Even darker shade on click */
+}
+
 .chat-response {
-    background-color: #444;
+    background-color: #a4d6fa;
     padding: 15px;
-    border-radius: 5px;
+    border-radius: 4px;
     min-height: 100px; /* Minimum height for the response box */
     margin-top: 20px;
+    color: #212529;
 }
-.accordion {
-    margin-top: 20px;
-    background-color: #444;
-    border-radius: 5px;
+
+.logo {
+    align-content: center;
 }
-.accordion-button {
-    color: white;
-    background-color: #555;
-}
-.accordion-body {
-    color: white; /* Improved visibility of text */
-}
+
+
+
 pre {
     white-space:pre-wrap;
 }
