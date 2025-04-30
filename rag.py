@@ -1,5 +1,4 @@
 from langchain_core.prompts import PromptTemplate
-from langchain.chains import RetrievalQA
 from langchain_community.llms.ctransformers import CTransformers
 from langchain_community.embeddings import SentenceTransformerEmbeddings
 from langchain_qdrant.vectorstores import Qdrant
@@ -35,8 +34,9 @@ llm = CTransformers(
     **config
 )
 
-prompt_template = """answer the question appropriately in the context given.
-imagine you are communicating with her, not like writing a book.
+prompt_template = """You are an experienced psychologist specializing in helping people overcome glossophobia (the fear of public speaking). 
+Please answer the following question in a warm, casual, and encouraging tone, using everyday language. Avoid technical or overly academic terms.
+Make sure to base your answer **only** on the information provided below. If the context does not contain enough information, simply say "The information provided is not enough to answer this question directly."
 
 Question: {question}
 Context: {context}
